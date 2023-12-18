@@ -1,9 +1,11 @@
 import React from "react";
 import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
-import Dashboard from "./Dashboard";
-import HeroList from "./HeroList";
-import HeroDetail from "./HeroDetail";
+import Dashboard from "./components/Dashboard";
+import HeroList from "./components/HeroList";
+import HeroDetail from "./components/HeroDetail";
+import HeroDetailWrapper from "./components/HeroDetailWrapper";
 import './App.css'
+
 const App = () => {
   return (
     <Router>
@@ -14,7 +16,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='/heroes' element={<HeroList />} />
-          <Route path='/detail/:id' element={<HeroDetail />} />
+          <Route path='/detail/:id' element={<HeroDetailWrapper />} />
         </Routes>
       </div>
     </Router>

@@ -1,17 +1,13 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./Dashboard.css"; // Make sure to import the CSS file
+import {connect} from "react-redux";
+import "./Dashboard.css";
 
-const heroes = [
-  {id: 1, name: "Spider-Man", favId: 1},
-  {id: 2, name: "Iron Man", favId: 2},
-  {id: 3, name: "Narco", favId: 3},
-  {id: 4, name: "Magneta", favId: 15},
-  {id: 5, name: "RubberMan", favId: 14},
-];
-
-const sortedHeroes = heroes.sort( ( a, b ) => a.favId - b.favId );
-function Dashboard() {
+const Dashboard = ({heroes}) => {
+  const sortedHeroes = [...heroes].sort((a, b) => a.favId - b.favId);
+   if (!Array.isArray(heroes) || heroes.length === 0) {
+     return <div>Loading...</div>;
+   }
   return (
     <div className='dashboard'>
       <h3>Top Heroes</h3>
@@ -26,6 +22,10 @@ function Dashboard() {
       </div>
     </div>
   );
-}
+};
 
-export default Dashboard;
+const mapStateToProps = (state) => ({
+  heroes: state.hero.heroes,
+});
+
+export default connect(mapStateToProps)(Dashboard);
