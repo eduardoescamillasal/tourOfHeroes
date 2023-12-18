@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tourOfHeroes/static/css/main.31df2345.chunk.css",
-    "main.js": "/tourOfHeroes/static/js/main.0b3e16a8.chunk.js",
-    "main.js.map": "/tourOfHeroes/static/js/main.0b3e16a8.chunk.js.map",
+    "main.js": "/tourOfHeroes/static/js/main.a97806bb.chunk.js",
+    "main.js.map": "/tourOfHeroes/static/js/main.a97806bb.chunk.js.map",
     "runtime~main.js": "/tourOfHeroes/static/js/runtime~main.244492da.js",
     "runtime~main.js.map": "/tourOfHeroes/static/js/runtime~main.244492da.js.map",
     "static/js/2.64762e07.chunk.js": "/tourOfHeroes/static/js/2.64762e07.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.d5f86460.chunk.js": "/tourOfHeroes/static/js/3.d5f86460.chunk.js",
     "static/js/3.d5f86460.chunk.js.map": "/tourOfHeroes/static/js/3.d5f86460.chunk.js.map",
     "index.html": "/tourOfHeroes/index.html",
-    "precache-manifest.483c0a15160978444cc0e2084b28261c.js": "/tourOfHeroes/precache-manifest.483c0a15160978444cc0e2084b28261c.js",
+    "precache-manifest.d45b1ed9559fbda30d980fbe424835ea.js": "/tourOfHeroes/precache-manifest.d45b1ed9559fbda30d980fbe424835ea.js",
     "service-worker.js": "/tourOfHeroes/service-worker.js",
     "static/css/main.31df2345.chunk.css.map": "/tourOfHeroes/static/css/main.31df2345.chunk.css.map"
   }
