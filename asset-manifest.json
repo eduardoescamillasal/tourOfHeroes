@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/tourOfHeroes/static/css/main.e9800afe.css",
-    "main.js": "/tourOfHeroes/static/js/main.1e4ae54f.js",
-    "static/js/787.1dd53b76.chunk.js": "/tourOfHeroes/static/js/787.1dd53b76.chunk.js",
+    "main.css": "/tourOfHeroes/static/css/main.38397bfd.chunk.css",
+    "main.js": "/tourOfHeroes/static/js/main.b0994dd7.chunk.js",
+    "main.js.map": "/tourOfHeroes/static/js/main.b0994dd7.chunk.js.map",
+    "runtime~main.js": "/tourOfHeroes/static/js/runtime~main.244492da.js",
+    "runtime~main.js.map": "/tourOfHeroes/static/js/runtime~main.244492da.js.map",
+    "static/js/2.35714301.chunk.js": "/tourOfHeroes/static/js/2.35714301.chunk.js",
+    "static/js/2.35714301.chunk.js.map": "/tourOfHeroes/static/js/2.35714301.chunk.js.map",
+    "static/js/3.d5f86460.chunk.js": "/tourOfHeroes/static/js/3.d5f86460.chunk.js",
+    "static/js/3.d5f86460.chunk.js.map": "/tourOfHeroes/static/js/3.d5f86460.chunk.js.map",
     "index.html": "/tourOfHeroes/index.html",
-    "main.e9800afe.css.map": "/tourOfHeroes/static/css/main.e9800afe.css.map",
-    "main.1e4ae54f.js.map": "/tourOfHeroes/static/js/main.1e4ae54f.js.map",
-    "787.1dd53b76.chunk.js.map": "/tourOfHeroes/static/js/787.1dd53b76.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e9800afe.css",
-    "static/js/main.1e4ae54f.js"
-  ]
+    "precache-manifest.40da13244b168e924d6f0a0e3a91f338.js": "/tourOfHeroes/precache-manifest.40da13244b168e924d6f0a0e3a91f338.js",
+    "service-worker.js": "/tourOfHeroes/service-worker.js",
+    "static/css/main.38397bfd.chunk.css.map": "/tourOfHeroes/static/css/main.38397bfd.chunk.css.map"
+  }
 }
