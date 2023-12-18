@@ -5,7 +5,7 @@ import {addHero} from "../actions/heroActions";
 const AddHeroForm = () => {
   const [newHero, setNewHero] = useState({name: ""});
   const dispatch = useDispatch();
-  const heroes = useSelector((state) => state.hero.heroes); // Get current heroes from Redux
+  const heroes = useSelector((state) => state.hero.heroes); 
 
   const generateNewId = () => {
     const maxId = heroes.reduce((max, hero) => Math.max(hero.id, max), 0);
