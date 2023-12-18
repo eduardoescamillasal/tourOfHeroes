@@ -1,13 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
+import AddHeroForm from "./AddHeroForm";
 import "./Dashboard.css";
 
 const Dashboard = ({heroes}) => {
   const sortedHeroes = [...heroes].sort((a, b) => a.favId - b.favId);
-   if (!Array.isArray(heroes) || heroes.length === 0) {
-     return <div>Loading...</div>;
-   }
+  if (!Array.isArray(heroes) || heroes.length === 0) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className='dashboard'>
       <h3>Top Heroes</h3>
@@ -20,6 +21,7 @@ const Dashboard = ({heroes}) => {
           </Link>
         ))}
       </div>
+      <AddHeroForm />
     </div>
   );
 };
