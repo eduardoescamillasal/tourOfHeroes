@@ -1,12 +1,16 @@
 import React, {useState, useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {connect, useDispatch} from "react-redux";
-import {deleteHero, editHero} from "../actions/heroActions";
+import {deleteHero, editHero, incrementFavoriteCount} from "../actions/heroActions";
 
-const HeroDetail = ({hero, deleteHero, editHero}) => {
+const HeroDetail = ({hero, deleteHero, editHero, incrementFavoriteCount}) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [heroDetails, setHeroDetails] = useState(hero || {id: null, name: "Unknown"});
+
+  const handleFavorite = () => {
+    incrementFavoriteCount(hero.id);
+  };
 
   useEffect(() => {
     if (hero) {
@@ -41,6 +45,7 @@ const HeroDetail = ({hero, deleteHero, editHero}) => {
       </div>
       <button onClick={handleDelete}>Delete Hero</button>
       <button onClick={handleSave}>Save Hero</button>
+      <button onClick={handleFavorite}>Favorite</button>
     </div>
   );
 };
@@ -55,6 +60,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = {
   deleteHero,
   editHero,
+  incrementFavoriteCount,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeroDetail);
