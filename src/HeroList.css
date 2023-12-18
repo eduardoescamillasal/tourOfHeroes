@@ -1,0 +1,41 @@
+/* HeroList.css */
+
+.hero-list {
+  width:50%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-list-item {
+  background-color: #f0f0f0;
+  /* Light grey background */
+  border: 1px solid #d4d4d4;
+  /* Light grey border */
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-list-item:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  /* Add shadow on hover */
+}
+
+.badge {
+  background-color: #1976d2;
+  /* Blue background */
+  color: white;
+  padding: 8px 12px;
+  margin-right: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.hero-name {
+  flex-grow: 1;
+  /* Make the name take up the remaining space */
+}
