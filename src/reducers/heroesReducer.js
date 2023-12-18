@@ -17,7 +17,9 @@ function heroesReducer(state = initialState, action) {
     case EDIT_HERO:
       return {
         ...state,
-        heroes: state.heroes.map((hero) => (hero.id === action.payload.id ? action.payload : hero)),
+        heroes: state.heroes.map((existingHero) =>
+          existingHero.id === action.payload.id ? action.payload : existingHero
+        ),
       };
     case DELETE_HERO:
       return {
