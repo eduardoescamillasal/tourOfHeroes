@@ -54,3 +54,41 @@
   text-decoration: none;
   background-color: #e8e8e8;
 }
+
+.favorite-button {
+  background-color: #4CAF50;
+
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.favorite-button:hover {
+  background-color: #45a049;
+}
+
+.hero-item {
+  position: relative;
+}
+
+.favorite-button {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.hero-item:hover .favorite-button {
+  display: inline-block;
+}
+
+.hero-detail:hover .favorite-button {
+  display: inline-block;
+}

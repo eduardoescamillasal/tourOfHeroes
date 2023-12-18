@@ -1,4 +1,39 @@
-import {ADD_HERO, EDIT_HERO, DELETE_HERO} from "../actions/heroActions";
+
+const heroesReducerActions = {
+  ADD_HERO: (state, action) => ({
+    ...state,
+    heroes: [...state.heroes, action.payload],
+  }),
+
+  EDIT_HERO: (state, action) => ({
+    ...state,
+    heroes: state.heroes.map((existingHero) =>
+      existingHero.id === action.payload.id ? action.payload : existingHero
+    ),
+  }),
+
+  DELETE_HERO: (state, action) => ({
+    ...state,
+    heroes: state.heroes.filter((hero) => hero.id !== action.payload),
+  }),
+
+  MARK_AS_FAVORITE: (state, action) => {
+    const maxFavId = Math.max(...state.heroes.map((hero) => hero.favId || 0));
+    return {
+      ...state,
+      heroes: state.heroes.map((hero) =>
+        hero.id === action.payload ? {...hero, favId: maxFavId + 1} : hero
+      ),
+    };
+  },
+
+  INCREMENT_FAVORITE_COUNT: (state, action) => ({
+    ...state,
+    heroes: state.heroes.map((hero) =>
+      hero.id === action.payload ? {...hero, favoriteCount: (hero.favoriteCount || 0) + 1} : hero
+    ),
+  }),
+};
 
 const initialState = {
   heroes: [
@@ -10,25 +45,9 @@ const initialState = {
   ],
 };
 
-function heroesReducer(state = initialState, action) {
-  switch (action.type) {
-    case ADD_HERO:
-      return {...state, heroes: [...state.heroes, action.payload]};
-    case EDIT_HERO:
-      return {
-        ...state,
-        heroes: state.heroes.map((existingHero) =>
-          existingHero.id === action.payload.id ? action.payload : existingHero
-        ),
-      };
-    case DELETE_HERO:
-      return {
-        ...state,
-        heroes: state.heroes.filter((hero) => hero.id !== action.payload),
-      };
-    default:
-      return state;
-  }
-}
+const heroesReducer = (state = initialState, action) => {
+  const handler = heroesReducerActions[action.type];
+  return handler ? handler(state, action) : state;
+};
 
 export default heroesReducer;

@@ -1,11 +1,9 @@
-// actions.js
-
-// Action Types
 export const ADD_HERO = "ADD_HERO";
 export const EDIT_HERO = "EDIT_HERO";
 export const DELETE_HERO = "DELETE_HERO";
+export const MARK_AS_FAVORITE = "MARK_AS_FAVORITE";
+export const INCREMENT_FAVORITE_COUNT = "INCREMENT_FAVORITE_COUNT";
 
-// Action Creators
 export const addHero = (hero) => {
   return {
     type: ADD_HERO,
@@ -20,9 +18,23 @@ export const editHero = (hero) => {
   };
 };
 
-export const deleteHero = ( heroId ) => {
+export const deleteHero = (heroId) => {
   return {
     type: DELETE_HERO,
-    payload: heroId
+    payload: heroId,
+  };
+};
+
+export const markAsFavorite = (heroId) => {
+  return {
+    type: MARK_AS_FAVORITE,
+    payload: heroId,
+  };
+};
+
+export const incrementFavoriteCount = (heroId) => {
+  return {
+    type: INCREMENT_FAVORITE_COUNT,
+    payload: heroId,
   };
 };
