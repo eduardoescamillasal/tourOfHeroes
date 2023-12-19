@@ -17,19 +17,19 @@ const DonutAnimation = () => {
     const asciiframe = () => {
       const preTag = preRef.current;
       if (!preTag) return;
-      var b = [];
-      var z = [];
+      let b = [];
+      let z = [];
       A += 0.07;
       B += 0.03;
       let cA = Math.cos(A);
       let sA = Math.sin(A);
       let cB = Math.cos(B);
       let sB = Math.sin(B);
-      for (var k = 0; k < 1760; k++) {
+      for (let k = 0; k < 1760; k++) {
         b[k] = k % 80 == 79 ? "\n" : " ";
         z[k] = 0;
       }
-      for (var j = 0; j < 6.28; j += 0.07) {
+      for (let j = 0; j < 6.28; j += 0.07) {
         let ct = Math.cos(j);
         let st = Math.sin(j);
         for (let i = 0; i < 6.28; i += 0.02) {
@@ -39,7 +39,7 @@ const DonutAnimation = () => {
           let D = 1 / (sp * h * sA + st * cA + 5);
           let t = sp * h * cA - st * sA;
 
-          var x = 0 | (40 + 30 * D * (cp * h * cB - t * sB));
+          let x = 0 | (40 + 30 * D * (cp * h * cB - t * sB));
           let y = 0 | (12 + 15 * D * (cp * h * sB + t * cB));
           let o = x + 80 * y;
           let N = 0 | (8 * ((st * sA - sp * ct * cA) * cB - sp * ct * sA - st * cA - cp * ct * sB));
@@ -56,7 +56,7 @@ const DonutAnimation = () => {
   
       const canvasTag = canvasRef.current;
       if (!canvasTag) return;
-      var ctx = canvasTag.getContext("2d");
+      let ctx = canvasTag.getContext("2d");
       ctx.fillStyle = "#000";
       ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
@@ -65,26 +65,26 @@ const DonutAnimation = () => {
         B += 0.03;
       }
 
-      var cA = Math.cos(A);
+      let cA = Math.cos(A);
       let sA = Math.sin(A);
       let cB = Math.cos(B);
       let sB = Math.sin(B);
-      for (var j = 0; j < 6.28; j += 0.3) {
-        var ct = Math.cos(j);
+      for (let j = 0; j < 6.28; j += 0.3) {
+        let ct = Math.cos(j);
         let st = Math.sin(j);
         for (let i = 0; i < 6.28; i += 0.1) {
-          var sp = Math.sin(i);
+          let sp = Math.sin(i);
           let cp = Math.cos(i);
-          var ox = R2 + R1 * ct;
+          let ox = R2 + R1 * ct;
           let oy = R1 * st;
 
-          var x = ox * (cB * cp + sA * sB * sp) - oy * cA * sB;
-          var y = ox * (sB * cp - sA * cB * sp) + oy * cA * cB;
-          var ooz = 1 / (K2 + cA * ox * sp + sA * oy);
-          var xp = 150 + K1 * ooz * x;
-          var yp = 120 - K1 * ooz * y;
+          let x = ox * (cB * cp + sA * sB * sp) - oy * cA * sB;
+          let y = ox * (sB * cp - sA * cB * sp) + oy * cA * cB;
+          let ooz = 1 / (K2 + cA * ox * sp + sA * oy);
+          let xp = 150 + K1 * ooz * x;
+          let yp = 120 - K1 * ooz * y;
 
-          var L = 0.7 * (cp * ct * sB - cA * ct * sp - sA * st + cB * (cA * st - ct * sA * sp));
+          let L = 0.7 * (cp * ct * sB - cA * ct * sp - sA * st + cB * (cA * st - ct * sA * sp));
           if (L > 0) {
             ctx.fillStyle = "rgba(255,255,255," + L + ")";
             ctx.fillRect(xp, yp, 1.5, 1.5);
