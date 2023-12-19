@@ -1,94 +1,64 @@
+/* HeroList.css */
+
 .hero-list {
-  display: flex;
-  width: 50%;
-  list-style-type: none;
+  list-style: none;
   padding: 0;
-  margin: 0;
-  flex-direction: column;
-
-}
-
-.hero-list-item {
-  background-color: #f0f0f0;
-  border: 1px solid #d4d4d4;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 8px 80px;
-  display: flex;
-  align-items: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.hero-list-item:hover {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-
-}
-
-.badge {
-  background-color: #1976d2;
-  color: white;
-  padding: 8px 12px;
-  margin-right: 20px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.hero-name {
-  flex-grow: 1;
-}
-
-.hero-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  margin-top: 10px;
-  color: inherit;
-
-  width: 100%;
-
-}
-
-
-.hero-link:hover,
-.hero-link:focus {
-  text-decoration: none;
-  background-color: #e8e8e8;
-}
-
-.favorite-button {
-  background-color: #4CAF50;
-
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-}
-
-.favorite-button:hover {
-  background-color: #45a049;
 }
 
 .hero-item {
+  background-color: var(--color-light-blue);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
+    cursor: pointer;
+
+}
+
+.hero-link {
+  text-decoration: none;
+  color: var(--color-dark-brown);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  padding: 5px 10px;
+  color: white;
+}
+
+.hero-name {
+  font-weight: bold;
 }
 
 .favorite-button {
+  background-color: var(--color-light-yellow);
+  color: var(--color-dark-brown);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
   display: none;
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s, transform 0.2s;
 }
+
+.favorite-button:hover {
+  background-color: var(--color-dark-orange);
+  transform: scale(1.05);
+}
+
 
 .hero-item:hover .favorite-button {
-  display: inline-block;
-}
-
-.hero-detail:hover .favorite-button {
-  display: inline-block;
+  display: block;
 }

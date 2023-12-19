@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {connect, useDispatch} from "react-redux";
 import {deleteHero, editHero, incrementFavoriteCount} from "../actions/heroActions";
+import './HeroDetail.css';
 
 const HeroDetail = ({hero, deleteHero, editHero, incrementFavoriteCount}) => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const HeroDetail = ({hero, deleteHero, editHero, incrementFavoriteCount}) => {
   };
 
   return (
-    <div>
+    <div className="hero-detail">
       <h2>{heroDetails.name} Details</h2>
       <div>
         <label>ID: </label>
@@ -43,9 +44,9 @@ const HeroDetail = ({hero, deleteHero, editHero, incrementFavoriteCount}) => {
         <label>Name: </label>
         <input type='text' value={heroDetails.name} onChange={handleChange} />
       </div>
-      <button onClick={handleDelete}>Delete Hero</button>
-      <button onClick={handleSave}>Save Hero</button>
-      <button onClick={handleFavorite}>Favorite</button>
+      <button className="button-hero" onClick={handleDelete}>Delete Hero</button>
+      <button className="button-hero" onClick={handleSave}>Save Hero</button>
+      <button className="button-hero" onClick={handleFavorite}>Favorite</button>
     </div>
   );
 };
