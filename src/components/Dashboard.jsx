@@ -2,6 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import AddHeroForm from "./AddHeroForm";
+import HeroCard from "./Cards/HeroCard";
+import Navigation from "./Navigation";
 import "./Dashboard.css";
 
 const Dashboard = ({heroes}) => {
@@ -11,13 +13,12 @@ const Dashboard = ({heroes}) => {
   }
   return (
     <div className='dashboard'>
+      <Navigation />
       <h3>Top Heroes</h3>
       <div className='grid grid-pad'>
         {sortedHeroes.map((hero) => (
           <Link to={`/detail/${hero.id}`} className='col-1-4' key={hero.id}>
-            <div className='module hero'>
-              <h4>{hero.name}</h4>
-            </div>
+            <HeroCard hero={hero}/>
           </Link>
         ))}
       </div>

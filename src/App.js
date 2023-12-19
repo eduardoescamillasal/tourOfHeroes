@@ -10,9 +10,6 @@ const App = () => {
   return (
     <Router>
       <div>
-        <nav>
-          <Link to='/'>Dashboard</Link> | <Link to='/heroes'>Heroes</Link>
-        </nav>
         <Routes>
           <Route path='/' element={<Dashboard />} />
           <Route path='/heroes' element={<HeroList />} />

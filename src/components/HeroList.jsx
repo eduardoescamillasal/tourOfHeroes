@@ -2,7 +2,8 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {useDispatch} from "react-redux";
-import {incrementFavoriteCount} from "../actions/heroActions";
+import { incrementFavoriteCount } from "../actions/heroActions";
+import Navigation from "./Navigation";
 import "./HeroList.css";
 
 const HeroList = ({heroes}) => {
@@ -15,6 +16,7 @@ const HeroList = ({heroes}) => {
 
   return (
     <div>
+      <Navigation />
       <h2>Heroes</h2>
       <ul className='hero-list'>
         {sortedHeroes.map((hero) => (

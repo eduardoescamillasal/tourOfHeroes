@@ -1,0 +1,27 @@
+.hero-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-light-blue);
+    color: var(--color-dark-brown);
+    border: 1px solid var(--color-orange);
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .hero-card {
+    padding: 15px;
+  }
+
+  .button {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+}
