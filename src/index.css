@@ -10,18 +10,12 @@
 
 
 
-@font-face {
-  font-family: 'Coves';
-  src: url('/fonts/coves-typeface\ 2/') format('otf'),
-    url('/fonts/coves-typeface\ 2/') format('oft');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 body {
   margin: 0;
     color: var(--text-color);
-    font-family: -apple-system, BlinkMacSystemFont, 'Coves', 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -31,6 +25,6 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Coves",
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
 monospace;
 }
