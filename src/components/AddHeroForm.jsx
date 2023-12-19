@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {addHero} from "../actions/heroActions";
-
-const AddHeroForm = () => {
+import './AddHeroForm.css';
+const AddHeroForm = ({onClose}) => {
   const [newHero, setNewHero] = useState({name: ""});
   const dispatch = useDispatch();
   const heroes = useSelector((state) => state.hero.heroes); 
@@ -22,14 +22,27 @@ const AddHeroForm = () => {
     dispatch(addHero({...newHero, id: heroId}));
     setNewHero({name: ""}); 
   };
+  
+   const handleFormClose = (e) => {
+     e.preventDefault(); 
+     onClose();
+   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor='heroName'>Hero Name:</label>
-      <input id='heroName' type='text' value={newHero.name} onChange={handleChange} required />
-      <button type='submit'>Add Hero</button>
-    </form>
-  );
+   return (
+     <>
+       <div className='modal-backdrop' onClick={onClose}></div>
+       <div className='modal'>
+         <form onSubmit={handleSubmit}>
+           <label htmlFor='heroName'>Hero Name:</label>
+           <input id='heroName' type='text' value={newHero.name} onChange={handleChange} required />
+           <button type='submit'>Add Hero</button>
+           <button type='button' onClick={handleFormClose}>
+             Close
+           </button>
+         </form>
+       </div>
+     </>
+   );
 };
 
 export default AddHeroForm;

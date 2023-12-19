@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import AddHeroForm from "./AddHeroForm";
@@ -6,7 +6,13 @@ import HeroCard from "./Cards/HeroCard";
 import Navigation from "./Navigation";
 import "./Dashboard.css";
 
-const Dashboard = ({heroes}) => {
+const Dashboard = ( { heroes } ) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   const sortedHeroes = [...heroes].sort((a, b) => a.favId - b.favId);
   if (!Array.isArray(heroes) || heroes.length === 0) {
     return <div>Loading...</div>;
@@ -14,15 +20,16 @@ const Dashboard = ({heroes}) => {
   return (
     <div className='dashboard'>
       <Navigation />
-      <h3>Top Heroes</h3>
+      <h3 className='top-heroes'>Top Heroes</h3>
       <div className='grid grid-pad'>
         {sortedHeroes.map((hero) => (
           <Link to={`/detail/${hero.id}`} className='col-1-4' key={hero.id}>
-            <HeroCard hero={hero}/>
+            <HeroCard hero={hero} />
           </Link>
         ))}
       </div>
-      <AddHeroForm />
+      <button onClick={toggleModal}>Add New Hero</button>
+      {isModalOpen && <AddHeroForm onClose={toggleModal} />}
     </div>
   );
 };

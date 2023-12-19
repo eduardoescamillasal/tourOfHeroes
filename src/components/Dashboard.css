@@ -1,16 +1,24 @@
 /* Dashboard Component Styles */
 
 .dashboard {
-  text-align: center;
-
+  text-align: left;
+  margin-left: 20px;
   border-width: 5px;
-  border-color:#e8aa24
+  border-color:#e8aa24;
+  width: 80%;
+}
+
+.top-heroes {
+  font-size: 30px;
+  font-weight: 500;
+
 }
 
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 
 .grid-pad {
@@ -21,12 +29,13 @@
   flex-basis: 24%;
   margin: 0.5%;
   text-align: center;
+  text-decoration: none;
 }
 
 .module {
   padding: 10px;
   border-radius: 10px;
-  color: #e4ff1a;
+  color: #ffffff;
   background-color: #ff5724;
   transition: background-color 0.3s;
 }
@@ -41,7 +50,6 @@
   transform: translateY(-50%);
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .col-1-4 {
     flex-basis: 48%;
@@ -54,6 +62,12 @@
     flex-basis: 98%;
     margin: 1%;
   }
+}
+
+
+.hero-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 /*
