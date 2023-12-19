@@ -6,6 +6,7 @@ import HeroDetailWrapper from "./components/HeroDetailWrapper";
 import NotFound from "./components/NotFound";
 import HeroButton from "./components/Buttons/HeroButton";
 import "./App.css";
+import DonutAnimation from "./components/DonutAnimation";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,7 +31,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="main-content">
         <HeroButton onClick={toggleDarkMode}>
           {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
         </HeroButton>

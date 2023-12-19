@@ -45,6 +45,7 @@ body {
 body.dark-mode {
   background-color: var(--background-color-dark);
   color: var(--text-color-dark);
+  
 }
 
 code {
