@@ -1,0 +1,18 @@
+
+
+.hero-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.hero-input:focus {
+  outline: none;
+  border-color: var(--color-orange);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

@@ -2,12 +2,14 @@ import React,{useState} from "react";
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import AddHeroForm from "./AddHeroForm";
+import HeroButton from "./Buttons/HeroButton";
 import HeroCard from "./Cards/HeroCard";
 import Navigation from "./Navigation";
 import "./Dashboard.css";
 
 const Dashboard = ( { heroes } ) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [ isModalOpen, setIsModalOpen ] = useState( false );
+
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -28,7 +30,7 @@ const Dashboard = ( { heroes } ) => {
           </Link>
         ))}
       </div>
-      <button onClick={toggleModal}>Add New Hero</button>
+      <HeroButton onClick={toggleModal}>Add New Hero</HeroButton>
       {isModalOpen && <AddHeroForm onClose={toggleModal} />}
     </div>
   );

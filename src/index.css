@@ -5,7 +5,25 @@
   --color-dark-orange: #FF5714;
   --color-dark-brown: hsl(355, 48%, 16%);
   --color-glory-purple: #533a71;
-  --text-color: #575757
+  --text-color: #575757;
+  --dark-color-light-blue: #276f7b;
+  --dark-color-light-yellow: #7a7c2a;
+  --dark-color-orange: #a36830;
+  --dark-color-dark-orange: #a33b11;
+  --dark-color-dark-brown: hsl(355, 48%, 26%);
+  --dark-color-glory-purple: #3b2860;
+  --dark-text-color: #e0e0e0;
+
+}
+
+body.dark-mode {
+  --color-light-blue: var(--dark-color-light-blue);
+  --color-light-yellow: var(--dark-color-light-yellow);
+  --color-orange: var(--dark-color-orange);
+  --color-dark-orange: var(--dark-color-dark-orange);
+  --color-dark-brown: var(--dark-color-dark-brown);
+  --color-glory-purple: var(--dark-color-glory-purple);
+  --text-color: var(--dark-text-color);
 }
 
 
@@ -14,17 +32,22 @@
 
 body {
   margin: 0;
-    color: var(--text-color);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(45deg, var(--color-light-blue), var(--color-light-yellow));
-  
-  
+
+
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas,
-monospace;
+    monospace;
 }
