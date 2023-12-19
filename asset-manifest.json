@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tourOfHeroes/static/css/main.86ac3232.chunk.css",
+    "main.css": "/tourOfHeroes/static/css/main.ffe9ee39.chunk.css",
     "main.js": "/tourOfHeroes/static/js/main.08cc5d85.chunk.js",
     "main.js.map": "/tourOfHeroes/static/js/main.08cc5d85.chunk.js.map",
     "runtime~main.js": "/tourOfHeroes/static/js/runtime~main.0b8daab8.js",
@@ -10,8 +10,8 @@
     "static/js/3.c60c86f6.chunk.js": "/tourOfHeroes/static/js/3.c60c86f6.chunk.js",
     "static/js/3.c60c86f6.chunk.js.map": "/tourOfHeroes/static/js/3.c60c86f6.chunk.js.map",
     "index.html": "/tourOfHeroes/index.html",
-    "precache-manifest.64083cf631a3f752c3f735cb0ee078e7.js": "/tourOfHeroes/precache-manifest.64083cf631a3f752c3f735cb0ee078e7.js",
+    "precache-manifest.8510e7d6751452b951b1cdf54b5355ed.js": "/tourOfHeroes/precache-manifest.8510e7d6751452b951b1cdf54b5355ed.js",
     "service-worker.js": "/tourOfHeroes/service-worker.js",
-    "static/css/main.86ac3232.chunk.css.map": "/tourOfHeroes/static/css/main.86ac3232.chunk.css.map"
+    "static/css/main.ffe9ee39.chunk.css.map": "/tourOfHeroes/static/css/main.ffe9ee39.chunk.css.map"
   }
 }

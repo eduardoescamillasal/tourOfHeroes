@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0030b978a69dea35585d814510aa77e0",
+    "revision": "dedc529374037a125bcdc5298aa6ba4b",
     "url": "/tourOfHeroes/index.html"
   },
   {
-    "revision": "a49dc5ae79043f2b33a7",
-    "url": "/tourOfHeroes/static/css/main.86ac3232.chunk.css"
+    "revision": "98caeff29b32187d8cd1",
+    "url": "/tourOfHeroes/static/css/main.ffe9ee39.chunk.css"
   },
   {
     "revision": "a31fc4d4ea9a065b39a7",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tourOfHeroes/static/js/3.c60c86f6.chunk.js"
   },
   {
-    "revision": "a49dc5ae79043f2b33a7",
+    "revision": "98caeff29b32187d8cd1",
     "url": "/tourOfHeroes/static/js/main.08cc5d85.chunk.js"
   },
   {
