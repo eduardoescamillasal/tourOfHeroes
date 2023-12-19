@@ -2,8 +2,8 @@ import React from "react";
 import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import HeroList from "./components/HeroList";
-import HeroDetail from "./components/HeroDetail";
 import HeroDetailWrapper from "./components/HeroDetailWrapper";
+import NotFound from "./components/NotFound";
 import './App.css'
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
           <Route path='/' element={<Dashboard />} />
           <Route path='/heroes' element={<HeroList />} />
           <Route path='/detail/:id' element={<HeroDetailWrapper />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
     </Router>
