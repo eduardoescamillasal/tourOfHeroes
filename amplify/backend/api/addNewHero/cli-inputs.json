@@ -14,6 +14,34 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/getHero/{id}": {
+      "name": "/getHero/{id}",
+      "lambdaFunction": "getHero",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/deleteHero/{id}": {
+      "name": "/deleteHero/{id}",
+      "lambdaFunction": "deleteHero",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/updateHero/{id}": {
+      "name": "/updateHero/{id}",
+      "lambdaFunction": "updateHero",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/updateHeroes/{id}": {
+      "name": "/updateHeroes/{id}",
+      "lambdaFunction": "updateHeroes",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }

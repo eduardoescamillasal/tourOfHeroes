@@ -20,9 +20,28 @@
         },
         "addNewHero": {
           "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
-          "s3Key": "amplify-builds/addNewHero-64327158464f537a6c75-build.zip"
+          "s3Key": "amplify-builds/addNewHero-6b3566723238446a7261-build.zip"
         },
-        "listHeroes": {}
+        "listHeroes": {
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/listHeroes-4153505a634c65757374-build.zip"
+        },
+        "getHero": {
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/getHero-516736626d314743512f-build.zip"
+        },
+        "deleteHero": {
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/deleteHero-4f46366731634a7a4177-build.zip"
+        },
+        "updateHero": {
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/updateHero-44514c6c73555851464a-build.zip"
+        },
+        "updateHeroes": {
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/updateHeroes-436f306d6b5651446b46-build.zip"
+        }
       },
       "api": {
         "addNewHero": {}
