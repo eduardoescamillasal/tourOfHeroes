@@ -6,11 +6,23 @@ import HeroButton from "./Buttons/HeroButton";
 import HeroCard from "./Cards/HeroCard";
 import Navigation from "./Navigation";
 import "./Dashboard.css";
-
+import { API_BASE_URL } from "../apiConfig";
+import axios from "axios";
 const Dashboard = ( { heroes } ) => {
   const [ isModalOpen, setIsModalOpen ] = useState( false );
 
-
+const addNewHero = async (heroData) => {
+  try {
+    const response = await axios.post(
+      `${API_BASE_URL}/addNewHero`,
+      heroData
+    );
+    console.log(response.data); 
+  } catch (error) {
+    console.error("Error adding new hero:", error);
+  }
+};
+addNewHero({"id":"1", "name": "a", "favoriteCount": 2})
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
