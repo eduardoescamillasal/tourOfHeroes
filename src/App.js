@@ -7,8 +7,13 @@ import NotFound from "./components/NotFound";
 import HeroButton from "./components/Buttons/HeroButton";
 import "./App.css";
 import DonutAnimation from "./components/DonutAnimation";
+import axios from "axios";
+import {API_BASE_URL} from "./apiConfig";
+import {setInitialHeroes} from "./actions/heroActions";
+import {useDispatch} from "react-redux";
 
 const App = () => {
+  const dispatch = useDispatch();
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -25,13 +30,25 @@ const App = () => {
     setDarkMode(isDarkMode);
   }, []);
 
+  useEffect(() => {
+    fetchData();
+  }, [dispatch]);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${API_BASE_URL}/listHeroes`);
+      dispatch(setInitialHeroes(response.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
   return (
     <Router>
-      <div className="main-content">
+      <div className='main-content'>
         <HeroButton onClick={toggleDarkMode}>
           {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
         </HeroButton>

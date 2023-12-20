@@ -33,6 +33,19 @@ const heroesReducerActions = {
       hero.id === action.payload ? {...hero, favoriteCount: (hero.favoriteCount || 0) + 1} : hero
     ),
   }),
+  SET_INITIAL_HEROES: (state, action) => ({
+    ...state,
+    heroes: action.payload,
+  }),
+  FETCH_HERO_SUCCESS: (state, action) => {
+    const updatedHeroes = state.heroes.map((hero) =>
+      hero.id === action.payload.id ? action.payload : hero
+    );
+    if (!updatedHeroes.find((hero) => hero.id === action.payload.id)) {
+      updatedHeroes.push(action.payload);
+    }
+    return {...state, heroes: updatedHeroes};
+  },
 };
 
 const initialState = {

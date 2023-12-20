@@ -1,6 +1,6 @@
 {
   "api": {
-    "addHero": {
+    "addNewHero": {
       "dependsOn": [
         {
           "attributes": [
@@ -8,7 +8,47 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "addHero"
+          "resourceName": "addNewHero"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "listHeroes"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getHero"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "deleteHero"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "updateHero"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "updateHeroes"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -19,6 +59,120 @@
     "addHero": {
       "build": true,
       "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "addNewHero": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "deleteHero": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getHero": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "listHeroes": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "updateHero": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "updateHeroes": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "HeroesTable"
+        }
+      ],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
@@ -47,6 +201,108 @@
           "resourceName": "addHero"
         }
       ]
+    },
+    "AMPLIFY_function_addNewHero_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addNewHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_addNewHero_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addNewHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteHero_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_deleteHero_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "deleteHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_getHero_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_getHero_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_listHeroes_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "listHeroes"
+        }
+      ]
+    },
+    "AMPLIFY_function_listHeroes_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "listHeroes"
+        }
+      ]
+    },
+    "AMPLIFY_function_updateHero_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updateHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_updateHero_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updateHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_updateHeroes_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updateHeroes"
+        }
+      ]
+    },
+    "AMPLIFY_function_updateHeroes_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "updateHeroes"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "HeroesTable": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
     }
   }
 }
