@@ -1,0 +1,10 @@
+{
+  "resourceName": "HeroesTable",
+  "tableName": "HeroesTable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

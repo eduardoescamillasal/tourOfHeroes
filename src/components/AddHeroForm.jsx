@@ -4,6 +4,7 @@ import HeroButton from "./Buttons/HeroButton";
 import HeroInput from "./Inputs/HeroImput";
 import {addHero} from "../actions/heroActions";
 import "./AddHeroForm.css";
+import { v4 as uuidv4 } from "uuid";
 const AddHeroForm = ({onClose}) => {
   const [newHero, setNewHero] = useState({name: ""});
   const dispatch = useDispatch();
@@ -20,10 +21,11 @@ const AddHeroForm = ({onClose}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const heroId = generateNewId();
-    dispatch(addHero({...newHero, id: heroId}));
+    const heroId = uuidv4(); 
+    dispatch(addHero({...newHero, id: heroId, favoriteCount: 0}));
     setNewHero({name: ""});
   };
+
 
   const handleFormClose = (e) => {
     e.preventDefault();
