@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-tourofheroes-dev-112023-authRole",
+      "UnauthRoleArn": "arn:aws:iam::080745769713:role/amplify-tourofheroes-dev-112023-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::080745769713:role/amplify-tourofheroes-dev-112023-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+      "UnauthRoleName": "amplify-tourofheroes-dev-112023-unauthRole",
+      "StackName": "amplify-tourofheroes-dev-112023",
+      "StackId": "arn:aws:cloudformation:us-east-1:080745769713:stack/amplify-tourofheroes-dev-112023/10d8df00-9f5c-11ee-be96-0e7da9f4f72b",
+      "AmplifyAppId": "d376rdxnmzpsdm"
+    },
+    "categories": {
+      "function": {
+        "addHero": {
+          "dev": "dev",
+          "deploymentBucketName": "amplify-tourofheroes-dev-112023-deployment",
+          "s3Key": "amplify-builds/addHero-373056686153494f6963-build.zip"
+        }
+      },
+      "api": {
+        "addHero": {}
+      }
+    }
+  }
+}

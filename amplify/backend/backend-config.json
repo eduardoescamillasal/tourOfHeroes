@@ -1,0 +1,52 @@
+{
+  "api": {
+    "addHero": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "addHero"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "addHero": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_addHero_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_addHero_dev": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addHero"
+        }
+      ]
+    },
+    "AMPLIFY_function_addHero_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "addHero"
+        }
+      ]
+    }
+  }
+}
