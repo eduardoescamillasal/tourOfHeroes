@@ -1,6 +1,6 @@
 // DonutAnimation.js
 import React, {useEffect, useRef} from "react";
-import './DonutAnimation.css';
+import "./DonutAnimation.css";
 const DonutAnimation = () => {
   const canvasRef = useRef(null);
   const preRef = useRef(null);
@@ -13,6 +13,13 @@ const DonutAnimation = () => {
     const R2 = 2;
     const K1 = 150;
     const K2 = 5;
+    const getTimeBasedColor = () => {
+      const time = Date.now();
+      const red = Math.floor((Math.sin(time * 0.0001) + 1) * 128);
+      const green = Math.floor((Math.sin(time * 0.0002 + Math.PI / 3) + 1) * 128);
+      const blue = Math.floor((Math.sin(time * 0.0003 + (2 * Math.PI) / 3) + 1) * 128);
+      return `rgb(${red},${green},${blue})`;
+    };
 
     const asciiframe = () => {
       const preTag = preRef.current;
@@ -45,7 +52,9 @@ const DonutAnimation = () => {
           let N = 0 | (8 * ((st * sA - sp * ct * cA) * cB - sp * ct * sA - st * cA - cp * ct * sB));
           if (y < 22 && y >= 0 && x >= 0 && x < 79 && D > z[o]) {
             z[o] = D;
-            b[o] = ".,-~:;=!*#$@"[N > 0 ? N : 0];
+            let char = ".,-~:;=!*#$@"[N > 0 ? N : 0];
+            let color = getTimeBasedColor(); 
+            b[o] = `<span style="color: ${color};">${char}</span>`;
           }
         }
       }
@@ -53,7 +62,6 @@ const DonutAnimation = () => {
     };
 
     const canvasframe = () => {
-  
       const canvasTag = canvasRef.current;
       if (!canvasTag) return;
       let ctx = canvasTag.getContext("2d");
